@@ -8,7 +8,12 @@ module.exports = {
 
   test: {
     client: 'pg',
-    connection: 'postgres://localhost/tv_faves_test',
+    // connection: 'postgres://localhost/tv_faves_test',
+    connection: {
+      database: 'tv_faves_test',
+      user: 'postgres',
+      password: 'postgres'
+    },
     migrations: {
       directory: __dirname + '/db/migrations'
     },
