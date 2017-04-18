@@ -17,7 +17,7 @@ module.exports.getShows = (req, res, next) => {
 
 
 
-module.exports.getShowFaves = ({query: {showId}}, res. next) => {
+module.exports.getShowFaves = ({query: {showId}}, res, next) => {
   console.log('The query string', showId)
   Show.forge({id: showId})
   .fetch({withRelated: ['upvotes'], require: true})
